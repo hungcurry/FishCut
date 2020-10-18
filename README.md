@@ -1,4 +1,4 @@
- 
+ https://hungcurry.github.io/FishCut/
  
  day-01/金魚都能懂的網頁切版 - 圖文滿版區塊 NO001 .html <br>
  day-02/金魚都能懂的網頁切版-互動圖文卡片 NO002.html <br>
