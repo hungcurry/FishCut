@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>金魚都能懂的網頁切版-導覽列 NO008</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,700,900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html,body{
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.main-header{
+	background: linear-gradient(0deg,#cc4380,#fb6c75);
+}
+
+.main-header .container{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-header .logo{
+  width: 100px;
+}
+.main-header .logo img{
+  width: 100%;
+  display: block;
+}
+.main-header .main-nav{
+  display: flex;
+}
+
+      @media screen and (max-width:992px){
+        .main-header .main-nav{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top:77px;
+          background-color: #cc4380;
+          font-size: 20px;
+        }
+      }
+
+.main-header .main-nav a{
+  font-family: 'Noto Sans TC', sans-serif;
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 1em;
+	position: relative;
+	transform: translateY(0px);
+	transition: .3s;
+}
+.main-header .main-nav a:hover{
+	transform: translateY(-10px);
+}
+
+.main-header .main-nav a::before{
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: -5px;
+  height: 1px;
+  background-color: #fff;
+  transition: .3s;
+}
+.main-header .main-nav a:hover::before{
+  left: 0;
+  right: 0;
+}
+
+.main-header .header-search{
+  display: flex;
+}
+.main-header .header-search button:focus,
+.main-header .header-search input:focus{
+  outline: none;
+}
+.main-header .header-search button,
+.main-header .header-search input{
+  border: none;
+  padding: 5px 10px;
+  background-color: #fff;
+}
+.main-header .header-search button{
+	border-radius: 0 200px 200px 0;
+}
+.main-header .header-search input{
+	border-radius: 200px 0 0 200px;
+}
+</style>
+
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="container">
+
+      <a href="#" target="_blank" class="logo">
+        <img src="https://img.udn.com/art/2019_logo/images/new_udnlogo_01.svg" alt="">
+      </a>
+
+      <nav class="main-nav">
+        <a href="#">金魚都能懂系列</a>
+        <a href="#">暴力網頁入門系列</a>
+        <a href="#">CSS可樂系列</a>
+        <a href="#">RWD原來醬子系列</a>
+      </nav>
+    </div>
+  </div>
+  
+</body>
+</html>

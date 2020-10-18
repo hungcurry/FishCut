@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>金魚都能懂的網頁切版-表格怎麼切 NO012</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+html,body{
+  font-family: 'Noto Sans TC', sans-serif;
+  height: 100%;
+}
+.table-outer{
+  /* display: flex; */
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(90deg,#3d5894,#08c7a5);
+}
+.table-data{
+  /* 更改表格大小 */
+  max-width: 1000px;
+  margin: auto;
+}
+.table-data *{
+  box-sizing: border-box;
+}
+.table-data table{
+  width: 100%;
+  border: 3px double #666;
+  background-color: #fff;
+  border-radius: 10px;
+}
+      @media screen and (max-width:767px){
+        .table-data table{
+          padding: 10px;
+        }
+      }
+.table-data th{
+  border: 1px solid #666;
+  padding: 6px 10px;
+}
+.table-data td{
+  border: 1px solid #666;
+  padding: 6px 10px;
+}
+/* ----------------------
+    table-data caption 
+-----------------------*/
+/* 表格標題 */
+.table-data caption{
+  caption-side: top;
+  text-align: center;
+  padding: 10px 0;
+  color: #ccc;
+}
+.table-data caption a{
+  color: #f16d23;
+  text-decoration: none;
+}
+/* ----------------------
+    table-data thead
+-----------------------*/
+.table-data thead{
+  background-color: #72726b;
+  color: #fff;
+  text-align: center;
+}
+
+      @media screen and (max-width:767px){
+        .table-data thead{
+            display: none;
+        }
+      }
+
+/* thead 圓角 */
+.table-data thead th:first-child{
+  border-radius: 7px 0 0 0;
+}
+.table-data thead th:last-child{
+  border-radius: 0 7px 0 0;
+}
+/* ----------------------
+    table-data tbody
+-----------------------*/
+.table-data tbody td{
+  text-align: center;
+}
+      @media screen and (max-width:767px){
+        .table-data tbody tr{
+          width: 100%;
+          display: block;
+          margin: 10px 0;
+          /* border: 1px solid #f16d23; */
+        }
+        .table-data tbody td{
+          width: 100%;
+          display: block;
+          text-align: left;
+          overflow: hidden;
+        }
+        .table-data tbody td::before{
+          content: attr(data-thead-th) " : ";
+          color: #f16d23;
+          display: block;
+          float: left;
+          width: 8em;
+          text-align: left;
+          /* padding-right: 1em; */
+        }
+        .table-data tbody td span.td-col{
+          display: block;
+          float: left;
+          width: calc(100% - 8em);
+        }
+      }
+.table-data tbody a{
+  text-decoration: none;
+  color: #333;
+}
+/* 偶數 */
+.table-data tbody tr:nth-child(even){
+  background-color: #F7F7F2;
+}
+/* 奇數 */
+.table-data tbody tr:nth-child(odd){
+  background-color: #fff;
+}
+.table-data tbody tr:hover{
+  background-color: #fee;
+}
+/* ----------------------
+    table-data tfoot
+-----------------------*/
+.table-data tfoot td{
+  text-align: center;
+}
+/* tfoot 圓角 */
+.table-data tfoot td:first-child{
+  border-radius: 0 0 0 7px;
+}
+.table-data tfoot td:last-child{
+  border-radius: 0 0 7px 0;
+}
+      @media screen and (max-width:767px){
+        .table-data tfoot tr{
+          width: 100%;
+          display: block;
+          text-align: center;
+        }
+        .table-data tfoot td{
+          width: 100%;
+          display: block;
+          text-align: center;
+        }
+      }
+
+</style>
+
+</head>
+<body>
+
+<div class="table-outer">
+
+  <div class="table-data">
+    <table border="0" cellspacing="0" cellpadding="0">
+      <!-- 表格標題 -->
+      <caption>
+          【udn-活動指定商品】-<a href="https://www.youtube.com/c/csscoke">【活動指定商品】</a>
+      </caption>
+      <!-- 表格標題 -->
+
+      <thead>
+        <tr>
+          <th scope="col" width="10%">交易方式</th>
+          <th scope="col" width="10%">活動門檻</th>
+          <th scope="col" width="25%">回饋刷卡金</th>
+          <th scope="col" width="15%">限量登錄名額</th>
+          <th scope="col" width="15%">品號</th>
+          <th scope="col" width="25%">品名</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- 區域start -->
+        <tr>
+          <td data-thead-th="交易方式">
+            <a href="https://youtu.be/rwTMBmnIHcY" target="_blank">
+              <span class="td-col">累積</span>
+            </a>
+          </td>
+
+          <td data-thead-th="活動門檻">
+            <a href="https://youtu.be/aN7zFs_AT8s" target="_blank">
+              <span class="td-col">3,000元</span>
+            </a>
+          </td>
+
+          <td data-thead-th="回饋刷卡金">
+            <a href="https://youtu.be/rwTMBmnIHcY" target="_blank">
+              <span class="td-col">3%刷卡金，上限500元</span>
+            </a>
+          </td>
+
+          <td data-thead-th="限量登錄名額">
+            <a href="https://youtu.be/7BydlKueTgY" target="_blank">
+              <span class="td-col">1,000名/月</span>
+            </a>
+          </td>
+
+          <td data-thead-th="品號">
+              <a href="https://youtu.be/7BydlKueTgY" target="_blank">
+                <span class="td-col">U009974578</span>
+              </a>
+          </td>
+
+          <td data-thead-th="品名">
+            <a href="https://youtu.be/zRREfvlLFIU" target="_blank">
+              <span class="td-col">德國雙人 廚房小幫手組合(麵夾+攪拌匙)</span>
+            </a>
+          </td>
+        </tr>
+        <!-- 區域end -->
+
+        <!-- 區域start -->
+        <tr>
+          <td data-thead-th="交易方式">
+            <a href="https://youtu.be/rwTMBmnIHcY" target="_blank">
+              <span class="td-col">分期累積</span>
+            </a>
+          </td>
+
+          <td data-thead-th="活動門檻">
+            <a href="https://youtu.be/aN7zFs_AT8s" target="_blank">
+              <span class="td-col">15,000元</span>
+            </a>
+          </td>
+
+          <td data-thead-th="回饋刷卡金">
+            <a href="https://youtu.be/rwTMBmnIHcY" target="_blank">
+              <span class="td-col">5%刷卡金，上限1,000元</span>
+            </a>
+          </td>
+
+          <td data-thead-th="限量登錄名額">
+            <a href="https://youtu.be/7BydlKueTgY" target="_blank">
+              <span class="td-col">200名/月</span>
+            </a>
+          </td>
+
+          <td data-thead-th="品號">
+              <a href="https://youtu.be/7BydlKueTgY" target="_blank">
+                <span class="td-col">U009910370</span>
+              </a>
+          </td>
+
+          <td data-thead-th="品名">
+            <a href="https://youtu.be/zRREfvlLFIU" target="_blank">
+              <span class="td-col">德國雙人 TWIN Chef 經典廚刀4件組（三刀附刀具專用收納袋）</span>
+            </a>
+          </td>
+        </tr>
+        <!-- 區域end -->
+
+        <!-- 區域start -->
+        <tr>
+          <td data-thead-th="交易方式">
+            <a href="https://youtu.be/rwTMBmnIHcY" target="_blank">
+              <span class="td-col">累積</span>
+            </a>
+          </td>
+
+          <td data-thead-th="活動門檻">
+            <a href="https://youtu.be/aN7zFs_AT8s" target="_blank">
+              <span class="td-col">3,000元</span>
+            </a>
+          </td>
+
+          <td data-thead-th="回饋刷卡金">
+            <a href="https://youtu.be/rwTMBmnIHcY" target="_blank">
+              <span class="td-col">3%刷卡金，上限500元</span>
+            </a>
+          </td>
+
+          <td data-thead-th="限量登錄名額">
+            <a href="https://youtu.be/7BydlKueTgY" target="_blank">
+              <span class="td-col">1,000名/月</span>
+            </a>
+          </td>
+
+          <td data-thead-th="品號">
+              <a href="https://youtu.be/7BydlKueTgY" target="_blank">
+                <span class="td-col">U009974578</span>
+              </a>
+          </td>
+
+          <td data-thead-th="品名">
+            <a href="https://youtu.be/zRREfvlLFIU" target="_blank">
+              <span class="td-col">德國雙人 廚房小幫手組合(麵夾+攪拌匙)</span>
+            </a>
+          </td>
+        </tr>
+        <!-- 區域end -->
+
+        <!-- 區域start -->
+        <tr>
+          <td data-thead-th="交易方式">
+            <a href="https://youtu.be/rwTMBmnIHcY" target="_blank">
+              <span class="td-col">分期累積</span>
+            </a>
+          </td>
+
+          <td data-thead-th="活動門檻">
+            <a href="https://youtu.be/aN7zFs_AT8s" target="_blank">
+              <span class="td-col">15,000元</span>
+            </a>
+          </td>
+
+          <td data-thead-th="回饋刷卡金">
+            <a href="https://youtu.be/rwTMBmnIHcY" target="_blank">
+              <span class="td-col">5%刷卡金，上限1,000元</span>
+            </a>
+          </td>
+
+          <td data-thead-th="限量登錄名額">
+            <a href="https://youtu.be/7BydlKueTgY" target="_blank">
+              <span class="td-col">200名/月</span>
+            </a>
+          </td>
+
+          <td data-thead-th="品號">
+              <a href="https://youtu.be/7BydlKueTgY" target="_blank">
+                <span class="td-col">U009910370</span>
+              </a>
+          </td>
+
+          <td data-thead-th="品名">
+            <a href="https://youtu.be/zRREfvlLFIU" target="_blank">
+              <span class="td-col">德國雙人 TWIN Chef 經典廚刀4件組（三刀附刀具專用收納袋）</span>
+            </a>
+          </td>
+        </tr>
+        <!-- 區域end -->
+
+        <!-- 區域start -->
+        <tr>
+          <td data-thead-th="交易方式">
+            <a href="https://youtu.be/rwTMBmnIHcY" target="_blank">
+              <span class="td-col">累積</span>
+            </a>
+          </td>
+
+          <td data-thead-th="活動門檻">
+            <a href="https://youtu.be/aN7zFs_AT8s" target="_blank">
+              <span class="td-col">3,000元</span>
+            </a>
+          </td>
+
+          <td data-thead-th="回饋刷卡金">
+            <a href="https://youtu.be/rwTMBmnIHcY" target="_blank">
+              <span class="td-col">3%刷卡金，上限500元</span>
+            </a>
+          </td>
+
+          <td data-thead-th="限量登錄名額">
+            <a href="https://youtu.be/7BydlKueTgY" target="_blank">
+              <span class="td-col">1,000名/月</span>
+            </a>
+          </td>
+
+          <td data-thead-th="品號">
+              <a href="https://youtu.be/7BydlKueTgY" target="_blank">
+                <span class="td-col">U009974578</span>
+              </a>
+          </td>
+
+          <td data-thead-th="品名">
+            <a href="https://youtu.be/zRREfvlLFIU" target="_blank">
+              <span class="td-col">德國雙人 廚房小幫手組合(麵夾+攪拌匙)</span>
+            </a>
+          </td>
+        </tr>
+        <!-- 區域end -->
+
+        <!-- 區域start -->
+        <tr>
+          <td data-thead-th="交易方式">
+            <a href="https://youtu.be/rwTMBmnIHcY" target="_blank">
+              <span class="td-col">分期累積</span>
+            </a>
+          </td>
+
+          <td data-thead-th="活動門檻">
+            <a href="https://youtu.be/aN7zFs_AT8s" target="_blank">
+              <span class="td-col">15,000元</span>
+            </a>
+          </td>
+
+          <td data-thead-th="回饋刷卡金">
+            <a href="https://youtu.be/rwTMBmnIHcY" target="_blank">
+              <span class="td-col">5%刷卡金，上限1,000元</span>
+            </a>
+          </td>
+
+          <td data-thead-th="限量登錄名額">
+            <a href="https://youtu.be/7BydlKueTgY" target="_blank">
+              <span class="td-col">200名/月</span>
+            </a>
+          </td>
+
+          <td data-thead-th="品號">
+              <a href="https://youtu.be/7BydlKueTgY" target="_blank">
+                <span class="td-col">U009910370</span>
+              </a>
+          </td>
+
+          <td data-thead-th="品名">
+            <a href="https://youtu.be/zRREfvlLFIU" target="_blank">
+              <span class="td-col">德國雙人 TWIN Chef 經典廚刀4件組（三刀附刀具專用收納袋）</span>
+            </a>
+          </td>
+        </tr>
+        <!-- 區域end -->
+
+
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td>備註</td>
+          <td colspan="5">以上資料經 CSS coke 同意轉貼</td>
+        </tr>
+      </tfoot>
+
+    </table>
+  </div>
+
+</div>
+
+
+
+
+</body>
+</html>

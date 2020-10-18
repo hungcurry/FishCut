@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>金魚都能懂的網頁切版-訊息對話紀錄 NO018</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,700,900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html,body{
+  height: 100%;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d3effb;
+}
+.dialogue{
+  width: 100%;
+	max-width: 600px;
+  margin: auto;
+	padding: 20px;
+	box-shadow: 0 0 10px #3e92cc;
+	background-color: #f4f5f7;
+}
+.user{
+  display: flex;
+  margin-bottom: 20px;
+  font-family: 'Noto Sans TC', sans-serif;
+  /* 預設是等高 所以設定次軸讓他齊頭 */
+  align-items: flex-start;
+}
+.user.remote{
+  justify-content: flex-start;
+}
+.user.local{
+  justify-content: flex-end;
+}
+.user .avatar {
+  width: 60px;
+  text-align: center;
+  /* 解決flex自動收縮值 */
+  flex-shrink: 0;
+}
+.user .pic{
+  border-radius: 50%;
+  overflow: hidden;
+}
+.user .pic img{
+  width: 100%;
+  display: block;
+}
+.user .txt{
+  background-color: #aaa;
+  flex-shrink: 1;
+  padding: 16px;
+  border-radius: 10px;
+}
+.remote .txt{
+  margin-left: 20px;
+  margin-right: 80px;
+  color: #a1b4c5;
+	background-color: #fff;
+  position: relative;
+}
+.local .txt{
+  margin-right: 20px;
+  margin-left: 80px;
+  order: -1;
+  background-color: #3e92cc;
+	color: #FFF;
+  position: relative;
+}
+/* 三角形
+-----------------------*/
+.remote .txt::before,
+.local .txt::before{
+  content: " ";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 20%;
+  transform: translateX(-100%);
+  border-top: 10px solid  transparent;
+  border-bottom: 10px solid  transparent;
+}
+.remote .txt::before{
+  left: 0;
+  transform: translateX(-100%);
+  border-right: 10px solid #fff;
+}
+.local .txt::before{
+  right: 0;
+  transform: translateX(100%);
+  border-left: 10px solid #3e92cc;
+}
+</style>
+
+</head>
+<body>
+
+<div class="dialogue">
+
+  <div class="user remote">
+    <!-- 頭像區塊 -->
+    <div class="avatar">
+      <div class="pic">
+        <img src="https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.0-9/54462536_1078162965719435_3587732456049999872_n.jpg?_nc_cat=110&_nc_oc=AQkhQYVVNILel6t0bFcdvO2CnccN8Elx01uTicG2wSsag53ynSPN-F831AGPr9689EqO9YBF8QbonATAvZRQfecv&_nc_ht=scontent.ftpe7-1.fna&oh=32bd040bcb929787b402f9a6e56cd2b7&oe=5E26A977" alt="">
+      </div>
+      <div class="name">貓貓</div>
+    </div>
+
+    <!-- 文字區塊 -->
+    <div class="txt">
+      幹 我超帥的～～無敵帥熊！
+    </div>
+  </div>
+
+  <div class="user local">
+    <!-- 頭像區塊 -->
+    <div class="avatar">
+        <div class="pic">
+          <img src="https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.0-9/54798011_1078163152386083_6909144633003999232_n.jpg?_nc_cat=110&_nc_oc=AQkAArq6P9il6HBTw5-VnLMlm9JF6T4E-p0dtRiqegDY_WYb2xF12UvX7D2HkxeoRnWXc_aOmuzuBY41XHO8f_rO&_nc_ht=scontent.ftpe7-1.fna&oh=a4dc0210e45e0049179a48830c133c55&oe=5E3DB50F" alt="">
+        </div>
+        <div class="name">麻糬</div>
+    </div>
+
+    <!-- 文字區塊 -->
+    <div class="txt">
+        ＠＠．．沒救了
+    </div>
+  </div> 
+
+  <div class="user remote">
+      <!-- 頭像區塊 -->
+      <div class="avatar">
+        <div class="pic">
+          <img src="https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.0-9/54462536_1078162965719435_3587732456049999872_n.jpg?_nc_cat=110&_nc_oc=AQkhQYVVNILel6t0bFcdvO2CnccN8Elx01uTicG2wSsag53ynSPN-F831AGPr9689EqO9YBF8QbonATAvZRQfecv&_nc_ht=scontent.ftpe7-1.fna&oh=32bd040bcb929787b402f9a6e56cd2b7&oe=5E26A977" alt="">
+        </div>
+        <div class="name">貓貓</div>
+      </div>
+  
+      <!-- 文字區塊 -->
+      <div class="txt">
+        有意見媽？
+      </div>
+  </div>
+
+  <div class="user local">
+    <!-- 頭像區塊 -->
+    <div class="avatar">
+        <div class="pic">
+          <img src="https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.0-9/54798011_1078163152386083_6909144633003999232_n.jpg?_nc_cat=110&_nc_oc=AQkAArq6P9il6HBTw5-VnLMlm9JF6T4E-p0dtRiqegDY_WYb2xF12UvX7D2HkxeoRnWXc_aOmuzuBY41XHO8f_rO&_nc_ht=scontent.ftpe7-1.fna&oh=a4dc0210e45e0049179a48830c133c55&oe=5E3DB50F" alt="">
+        </div>
+        <div class="name">麻糬</div>
+    </div>
+
+    <!-- 文字區塊 -->
+    <div class="txt">
+        沒全世界 只有這隻貓最帥 可以懶可以不工作
+        還可以免費懶懶睡
+    </div>
+  </div>
+
+  <div class="user remote">
+      <!-- 頭像區塊 -->
+      <div class="avatar">
+        <div class="pic">
+          <img src="https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.0-9/54462536_1078162965719435_3587732456049999872_n.jpg?_nc_cat=110&_nc_oc=AQkhQYVVNILel6t0bFcdvO2CnccN8Elx01uTicG2wSsag53ynSPN-F831AGPr9689EqO9YBF8QbonATAvZRQfecv&_nc_ht=scontent.ftpe7-1.fna&oh=32bd040bcb929787b402f9a6e56cd2b7&oe=5E26A977" alt="">
+        </div>
+        <div class="name">貓貓</div>
+      </div>
+  
+      <!-- 文字區塊 -->
+      <div class="txt">
+        👍喔～多謝誇獎
+      </div>
+  </div>
+
+  <div class="user local">
+    <!-- 頭像區塊 -->
+    <div class="avatar">
+        <div class="pic">
+          <img src="https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.0-9/54798011_1078163152386083_6909144633003999232_n.jpg?_nc_cat=110&_nc_oc=AQkAArq6P9il6HBTw5-VnLMlm9JF6T4E-p0dtRiqegDY_WYb2xF12UvX7D2HkxeoRnWXc_aOmuzuBY41XHO8f_rO&_nc_ht=scontent.ftpe7-1.fna&oh=a4dc0210e45e0049179a48830c133c55&oe=5E3DB50F" alt="">
+        </div>
+        <div class="name">麻糬</div>
+    </div>
+
+    <!-- 文字區塊 -->
+    <div class="txt">
+        天啊！我好虛偽～～～～～～！！！
+    </div>
+  </div> 
+</div>
+
+</body>
+</html>

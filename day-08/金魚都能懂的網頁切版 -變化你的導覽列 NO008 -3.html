@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>金魚都能懂的網頁切版-導覽列 NO008</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,700,900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html,body{
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.main-header{
+	background: linear-gradient(0deg,#cc4380,#fb6c75);
+
+}
+
+.main-header .container{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-header .logo{
+  width: 100px;
+}
+.main-header .logo img{
+  width: 100%;
+  display: block;
+}
+.main-header .main-nav{
+  display: flex;
+}
+
+.main-header .main-nav li{
+  display: flex;
+}
+
+#menu-control{
+    position: absolute;
+    z-index: -2;
+    opacity: 0;
+}
+.menu-btn{
+    display: none;
+}
+
+      @media screen and (max-width:1024px){
+        .main-header .main-nav{
+          width: 80%;
+          height: calc(100vh - 77px);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          position: absolute;
+          left: -100%;
+          right: 0;
+          top: 77px;
+          background-color: #a7205c9f;
+          font-size: 20px;
+          transition:  all .5s;
+        }
+        .main-header .main-nav li{
+          width: 100%;
+          justify-content: center;
+        }
+        #menu-control:checked ~ .main-header .main-nav{
+            left: 0;
+        }
+        .menu-btn{
+            width: 40px;
+            height: 40px;
+            background-color: #7e2950;
+            display: block;
+            position: absolute;
+            right: 10px;
+        }
+        .menu-btn span{
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+            /* 文字弄消失 */
+        }
+        .menu-btn::before{
+            content: " ";
+            position: absolute;
+            height: 2px;
+            width: 36px;
+            left: 2px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: #fff;
+            box-shadow: 0px 8px 0px #fff,
+                        0px -8px 0px #fff;
+        }
+      }
+
+.main-header .main-nav a{
+  font-family: 'Noto Sans TC', sans-serif;
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 1em;
+	position: relative;
+	transform: translateY(0px);
+	transition: .3s;
+}
+.main-header .main-nav a:hover{
+	transform: translateY(-10px);
+  color: rgb(255, 234, 0);
+}
+
+.main-header .main-nav a::before{
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: -5px;
+  height: 1px;
+  background-color: #fff;
+  transition: .3s;
+}
+      @media screen and (max-width:1024px){
+        .main-header .main-nav a{
+          font-family: 'Noto Sans TC', sans-serif;
+          font-size: 20px;
+          padding: 10px 2em;
+        }
+      }
+.main-header .main-nav a:hover::before{
+  left: 0;
+  right: 0;
+}
+
+.main-header .header-search{
+  display: flex;
+}
+.main-header .header-search button:focus,
+.main-header .header-search input:focus{
+  outline: none;
+}
+.main-header .header-search button,
+.main-header .header-search input{
+  border: none;
+  padding: 5px 10px;
+  background-color: #fff;
+}
+.main-header .header-search button{
+	border-radius: 0 200px 200px 0;
+}
+.main-header .header-search input{
+	border-radius: 200px 0 0 200px;
+}  
+
+
+</style>
+
+</head>
+<body>
+
+  <input type="checkbox" name="menu-control" id="menu-control">
+
+  <header class="main-header">
+    <div class="container">
+
+      <a href="#" target="_blank" class="logo">
+        <img src="https://img.udn.com/art/2019_logo/images/new_udnlogo_01.svg" alt="">
+      </a>
+
+      <label for="menu-control" class="menu-btn">
+        <span>選單</span>
+      </label>
+
+      <ul class="main-nav">
+        <li class="active">
+          <a href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=false&UrlRefXuid=221907151b68ED478Zy">主會場</a>
+        </li>
+        <li>
+            <a href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=221907011T31XiG8nnu">NB/PC</a>
+        </li>
+        <li>
+            <a href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=2219060137NZHT2FPKn">3C周邊</a>
+        </li>
+        <li>
+            <a href="https://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=20221231234NQulZtqd0">相機/配件</a>
+        </li>
+        <li>
+            <a href="https://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=2025123134lf7zf8yc74">手機/電玩</a>
+        </li>
+        <li>
+            <a href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=2500100166qHb8LMyViE">汽車/機車</a>
+        </li>
+        <li>
+            <a href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=25001001648kj78gyRRq">大家電</a>
+        </li>
+        <li>
+            <a href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=2500100162vzg6GMFhHW">小家電</a>
+        </li>
+        <li>
+            <a href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=2500100163E1mCBx8uN7">鍋具餐廚</a>
+        </li>
+        <li>
+            <a href="http://shopping.udn.com/mall/cus/event/eventPage.do?header=true&UrlRefXuid=2500100165aKJ9dyr5RM">廚衛照明</a>
+        </li>
+      </ul>
+    </div>
+  </div>  
+
+</body>
+</html>
